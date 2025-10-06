@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mercury-50: #f6f6f6;
+  --color-mercury-100: #e8e8e6;
+  --color-mercury-200: #d6d6d2;
+  --color-mercury-300: #bbbbb6;
+  --color-mercury-400: #9f9e98;
+  --color-mercury-500: #8c8b83;
+  --color-mercury-600: #807e76;
+  --color-mercury-700: #6b6863;
+  --color-mercury-800: #595853;
+  --color-mercury-900: #494845;
+  --color-mercury-950: #262524;
+}
+
+@layer base {
+  body,
+  #__nuxt {
+    @apply bg-mercury-100 min-h-[100dvh] flex flex-1 overflow-hidden;
+  }
+
+  h1,
+  h2 {
+    @apply text-gray-950 font-bold;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-[1.35rem];
+  }
+
+  span,
+  p {
+    @apply text-gray-950 text-base font-normal;
+  }
+
+  a.router-link-active::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0.75rem;
+    height: 2px;
+    background: #222222;
+    border-radius: 2px;
+  }
+}
