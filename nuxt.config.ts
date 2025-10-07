@@ -9,5 +9,24 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/image", '@nuxt/icon'],
+  modules: ["@nuxt/image", "@nuxt/icon", "@nuxtjs/i18n"],
+  i18n: {
+    customRoutes: "config",
+    defaultLocale: "en",
+    locales: [
+      { code: "en", name: "English", file: "en.json" },
+      { code: "pt", name: "Portugues", file: "pt.json" },
+    ],
+    pages: {
+      experience: {
+        pt: "/experiência",
+      },
+      skills: {
+        pt: "/habilidades",
+      },
+      contact: {
+        pt: "/contato",
+      },
+    },
+  },
 });
