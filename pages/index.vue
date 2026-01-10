@@ -1,20 +1,30 @@
 <template>
-  <div class="relative flex my-auto justify-between w-full">
-    <div class="flex flex-col gap-2 text-right">
-      <h3 class="text-4xl">Edson Neto's</h3>
-      <h1 class="text-8xl">Portfolio</h1>
+  <div
+    class="flex flex-row-reverse justify-center gap-2 mt-1/2 md:flex-row items-center md:items-start my-auto md:justify-between w-full">
+    <span class="w-1/5 rotate-90 absolute left-2 bottom-2 h-0.5 rounded-2xl bg-black"></span>
+    <div class="flex flex-col md:gap-2">
+      <h1 class="md:text-8xl">Hi, I'm</h1>
+      <h1 class="md:text-8xl">Edson Neto.</h1>
+      <h4 class="md:text-4xl">Senior Software Developer</h4>
+      <NuxtLink
+        class="w-fit mt-3 appearance-none rounded-md inline-flex justify-center border border-mercury-950 px-5 py-2.5 text-sm select-none font-semibold text-black inset-ring inset-ring-white/5 hover:cursor-pointer hover:border-mercury-500"
+        target="_blank" to="/Edson_Neto_CV-en-US.pdf" external>
+        Download Resume
+      </NuxtLink>
     </div>
     <div class="flex flex-col gap-2">
-      <NuxtPicture format="avif,webp" src="/me.png" />
-      <div class="inline-flex gap-1 py-0.5 border-b w-fit mx-auto">
-        <Icon name="fa7-brands:github" width="16" height="16" />
-        <Icon name="fa7-brands:linkedin" width="16" height="16" />
-        <Icon name="fa7-solid:envelope" width="16" height="16" />
+      <NuxtImg src="/me.png" alt="A picture of myself" loading="eager" sizes="150px sm:200px md:400px" />
+      <div class="inline-flex gap-1 py-0.5 border-b-2 w-fit mx-auto">
+        <NuxtLink class="hover:text-mercury-400" href="https://github.com/edsoonneto" target="_blank">
+          <Icon name="fa7-brands:github" mode="svg" class="text-xl md:text-[32px]" />
+        </NuxtLink>
+        <NuxtLink class="hover:text-mercury-400" href="https://www.linkedin.com/in/netoo-edson/" target="_blank">
+          <Icon name="fa7-brands:linkedin" mode="svg" class="text-xl md:text-[32px]" />
+        </NuxtLink>
+        <NuxtLink class="hover:text-mercury-400" href="mailto:contact@edsonneto.com" target="_blank">
+          <Icon name="fa7-solid:envelope" mode="svg" class="text-xl md:text-[32px]" />
+        </NuxtLink>
       </div>
-    </div>
-    <div class="absolute top-full left-0 flex flex-col gap-2 w-14 h-fit flex-nowrap">
-      <h4 class="whitespace-pre-line">Senior Fullstack</h4>
-      <span class="flex border-l h-24 w-1"></span>
     </div>
   </div>
 </template>

@@ -17,7 +17,7 @@
 @layer base {
   body,
   #__nuxt {
-    @apply bg-mercury-100 min-h-[100dvh] flex flex-1 overflow-hidden;
+    @apply bg-mercury-100 h-[100dvh] flex flex-1 overflow-hidden;
   }
 
   h1,
@@ -47,4 +47,25 @@
     background: #222222;
     border-radius: 2px;
   }
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: transparent;
+  /* border: 2px solid black; */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-gray-950);
+  border-radius: 100vh;
+  border: border;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mercury-400);
 }
