@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <main class="relative flex flex-col flex-1 container mx-auto px-8 py-6">
-    <hr class="w-1/5 rotate-90 absolute right-2 rounded-2xl top-2" />
-    <Navbar />
+  <main class="relative flex flex-col flex-1 container mx-auto px-2 py-1 md:px-8 md:py-6">
     <slot />
   </main>
 </template>
